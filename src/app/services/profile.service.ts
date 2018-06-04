@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { User } from '../user';
+import { Repo } from '../repo';
 
 
 
@@ -18,9 +20,20 @@ export class ProfileService {
       this.username= 'Michael-mbogo';
   }
 
-    getProfileInfo() {
+    getUser() {
       return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
-    
+
   }
+
+     getRepo() {
+       return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+
+     }
+
+     updateUser(username:string){
+       this.username = username;
+     }
+
+
 
 }
