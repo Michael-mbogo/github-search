@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -32,7 +33,7 @@ export class ProfileComponent implements OnInit {
       console.log(user);
       this.user=user;
     });
-    
+
     this.profileService.getRepo().subscribe(repo => {
       console.log(repo);
       this.repo=repo;
