@@ -1,19 +1,4 @@
 <form (ngSubmit)="search()">
-  <label>Search username</label>
-  <input type="text" placeholder="User" [(ngModel)]="username">
-  <button type="button">Search</button>
-  <button type="button" (click)="reset">Reset</button>
-
-</form>
-
-<div *ngIf="user">
-
-
-</div>
-
-<!--
-
-<form (ngSubmit)="search()">
   <label class="label">Search by Username:</label>
     <div class="field has-addons">
       <div class="control has-icons-left is-expanded">
@@ -21,14 +6,14 @@
         <span class="icon is-small is-left"><i class="fab fa-github"></i></span>
       </div>
       <div class="control"><button class="button is-link">Search</button></div>
-      <div class="control"><button (click)="reset()">Reset</button></div>
+      <div class="control"><button (click)="reset">Reset</button></div>
     </div>
 </form><br>
 
-<nav class="panel fadein" *ngIf="user"> -->
+<nav class="panel fadein" *ngIf="user">
 
   <!-- Basic Information Panel -->
-   <!-- <p class="panel-heading">{{ user?.name }}</p>
+  <p class="panel-heading">{{ user?.name }}</p>
   <div class="panel-block">
     <div class="columns">
       <div class="column is-one-third">
@@ -41,33 +26,21 @@
           <span class="tag is-success is-rounded">{{ user?.followers }} Followers</span>
           <span class="tag is-primary is-rounded">{{ user?.following }} Following</span>
         </div>
-        <table class="table is-bordered is-striped is-fullwidth">
-          <tbody>
-            <tr>
-              <th>Username:</th>
-              <td>{{ user?.login }}</td>
-            </tr>
-            <tr>
-              <th>Location:</th>
-              <td>{{ user?.location }}</td>
-            </tr>
-            <tr>
-              <th>Website:</th>
-              <td>{{ user?.blog }}</td>
-            </tr>
-            <tr>
-              <th>Member Since:</th>
-              <td>{{ user?.created_at | date: 'shortDate' }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <ul>
+          <li>Name: {{user?.login }}</li>
+          <li>From: {{user?.location}}</li>
+          <li>Member since: {{ user?.created_at | date: 'shortDate' }}</li>
+          <li></li>
+          <li></li>
+        </ul>
+
       </div>
     </div>
-  </div><br> -->
+  </div><br>
 
   <!-- Repository Details Panel -->
-   <!-- <nav class="panel">
-    <p class="panel-heading">Repos</p>
+  <nav class="panel">
+    <h1 class="panel-heading">Repos</h1>
     <div class="panel-block">
       <div class="columns">
         <div class="column">
@@ -92,4 +65,4 @@
       </div>
     </div>
   </nav>
-</nav> -->
+</nav>
