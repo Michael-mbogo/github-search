@@ -1,6 +1,19 @@
+<form (ngSubmit)="search()">
+  <label>Search username</label>
+  <input type="text" placeholder="User" [(ngModel)]="username">
+  <button type="button">Search</button>
+  <button type="button" (click)="reset">Reset</button>
+
+</form>
+
+<div *ngIf="user">
 
 
-<!-- <form (ngSubmit)="search()">
+</div>
+
+<!--
+
+<form (ngSubmit)="search()">
   <label class="label">Search by Username:</label>
     <div class="field has-addons">
       <div class="control has-icons-left is-expanded">
@@ -10,9 +23,9 @@
       <div class="control"><button class="button is-link">Search</button></div>
       <div class="control"><button (click)="reset()">Reset</button></div>
     </div>
-</form><br> -->
+</form><br>
 
-<!-- <nav class="panel fadein" *ngIf="user"> -->
+<nav class="panel fadein" *ngIf="user"> -->
 
   <!-- Basic Information Panel -->
    <!-- <p class="panel-heading">{{ user?.name }}</p>
