@@ -8,8 +8,8 @@ import { ProfileService } from '../services/profile.service';
 })
 export class ProfileComponent implements OnInit {
   username:string;
-  user:any[];
-  repo:any[];
+  user:any;
+  repo:any;
 
 
   constructor(private profileService:ProfileService) {
@@ -26,17 +26,6 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.profileService.updateUser(this.username);
-
-    this.profileService.getUser().subscribe(user => {
-      console.log(user);
-      this.user=user;
-    });
-
-    this.profileService.getRepo().subscribe(repo => {
-      console.log(repo);
-      this.repo=repo;
-    });
 
   }
 

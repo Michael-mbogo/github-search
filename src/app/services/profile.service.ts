@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { User } from '../user';
-import { Repo } from '../repo';
+import { HttpClient } from '@angular/common/http';
+
+
 
 
 
@@ -15,7 +15,7 @@ export class ProfileService {
   private clientid = '2ddb51df13183ba55b6d';
   private clientsecret= '2462f0401923eb74b1d737bfbbcd24ea8454430f';
 
-  constructor(private http:Http) {
+  constructor(private http:HttpClient) {
       console.log("Service is now ready!");
       this.username= 'Michael-mbogo';
   }
