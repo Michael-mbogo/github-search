@@ -27,12 +27,16 @@
             <span class="tag is-success is-rounded">{{ user?.followers }} Followers</span>
             <span class="tag is-primary is-rounded">{{ user?.following }} Following</span>
           </div>
-          <ul>
-            <li>Name: {{user?.login }}</li>
-            <li>From: {{user?.location}}</li>
-            <li>Member since: {{ user?.created_at | date: 'shortDate' }}</li>
+          <div class="list">
+            <ul>
+              <li>Name: {{user?.login }}</li>
+              <li>From: {{user?.location}}</li>
+              <li>Member since: {{ user?.created_at | date: 'shortDate' }}</li>
 
-          </ul>
+            </ul>
+
+          </div>
+
 
         </div>
       </div>
